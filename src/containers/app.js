@@ -34,13 +34,13 @@ export class AppContainer extends Component {
   }
 
   render() {
-
+    const placeholder = _.sample(['Try "love"', 'Try "hate"', 'Try "joy"', 'Try "sadness"', 'Try "surprise"', 'Try "confusion"']);
     const transactions = this.props.transactions.map((item) => <Transaction update={this.props.updateTransaction} transaction={item} key={item.id} />);
 
     return (
       <div className={styles.container}>
         <div className={styles.search}>
-          <input className={styles.searchTextField} placeholder={'Try "love"'} onChange={(e) => this.filterTransactions(e.target.value)} />
+          <input className={styles.searchTextField} placeholder={placeholder} onChange={(e) => this.filterTransactions(e.target.value)} />
         </div>
         <div className={styles.feed}>{transactions.length == 0 ? <div className={styles.emptyFeed}>Ooops.. Unable to find it.</div> : transactions}</div>
       </div>
