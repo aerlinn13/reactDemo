@@ -66,6 +66,30 @@ module.exports = {
             sourceMap: true
           }
         }]
+      },
+      {
+        test: /\.(gif|png|jpe?g|svg)$/i,
+        use: [
+          'file-loader',
+          {
+            loader: 'image-webpack-loader',
+            options: {
+              bypassOnDebug: true,
+            },
+          },
+        ],
+      },
+      {
+        test: /\.(ttf)$/i,
+        use: [
+          'url-loader',
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192
+            },
+          },
+        ],
       }
     ]
   },

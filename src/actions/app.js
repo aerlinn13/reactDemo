@@ -1,9 +1,16 @@
-import { APP_LOAD } from 'constants/action-types';
+import { UPDATE_DATA, UPDATE_TRANSACTION } from 'constants/action-types';
 
-export function loadApp() {
+
+export function updateData(data) {
   return {
-    type: APP_LOAD,
+    type: UPDATE_DATA,
+    payload: data
   };
 }
 
-export default { loadApp };
+export function updateTransaction(data) {
+  return {
+    type: UPDATE_TRANSACTION,
+    payload: data
+  };
+}

@@ -1,3 +1,3 @@
-export const APP_LOAD = 'APP_LOAD';
+export const UPDATE_TRANSACTION = 'UPDATE_TRANSACTION';
 
-export default { APP_LOAD };
+export const UPDATE_DATA = 'UPDATE_DATA';
